@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/button_background.xml" value="0.2991666666666667" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/ic_settings.xml" value="0.2991666666666667" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/round_anthrazit_background.xml" value="0.38166666666666665" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/round_purple_light_background.xml" value="0.38166666666666665" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/round_white_background.xml" value="0.38166666666666665" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/dialog_load_question_set.xml" value="0.3402777777777778" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_arrow_left.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_check.xml" value="0.3828125" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3402777777777778" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_settings.xml" value="0.3828125" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/repeat_background.xml" value="0.3402777777777778" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/round_purple_light_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/dialog_delete_question_set.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/dialog_load_question_set.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/dialog_save_question_set.xml" value="0.264" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_load_question_set.xml" value="0.25" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_question_list.xml" value="0.2" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_save_question_set.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_spin.xml" value="0.2" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_start.xml" value="0.25" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/load_delete_item.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/question_set_item.xml" value="0.25" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/spin_fragment.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19675925925925927" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

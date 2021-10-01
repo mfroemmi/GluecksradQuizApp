@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.mfroemmi.gluecksradquizapp.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_spinFragment"
+            app:destination="@id/spinFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mfroemmi.gluecksradquizapp.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spinFragment"
+        android:name="com.mfroemmi.gluecksradquizapp.SpinFragment"
+        android:label="fragment_spin"
+        tools:layout="@layout/fragment_spin" >
+        <action
+            android:id="@+id/action_spinFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="com.mfroemmi.gluecksradquizapp.QuestionListFragment"
+        android:label="fragment_question_list"
+        tools:layout="@layout/fragment_question_list" >
+        <action
+            android:id="@+id/action_questionListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_questionListFragment_to_loadQuestionSetFragment"
+            app:destination="@id/loadQuestionSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadQuestionSetFragment"
+        android:name="com.mfroemmi.gluecksradquizapp.LoadQuestionSetFragment"
+        android:label="fragment_load_question_set"
+        tools:layout="@layout/fragment_load_question_set" >
+        <action
+            android:id="@+id/action_loadQuestionSetFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+    </fragment>
+</navigation>

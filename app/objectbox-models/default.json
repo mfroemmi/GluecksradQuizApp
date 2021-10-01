@@ -1,0 +1,101 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3770391217160018994",
+      "lastPropertyId": "2:2825839565433206628",
+      "name": "QuestionsModel",
+      "properties": [
+        {
+          "id": "1:8584643804194180053",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2825839565433206628",
+          "name": "question",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:8408306338210336858",
+      "lastPropertyId": "11:1749659168654567691",
+      "name": "QuestionSetModel",
+      "properties": [
+        {
+          "id": "1:6530631345360009478",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1012140198141774410",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4996559234565372877",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "4:6376012291476414952",
+          "name": "question1",
+          "type": 9
+        },
+        {
+          "id": "5:7491274285118141263",
+          "name": "question2",
+          "type": 9
+        },
+        {
+          "id": "6:4418968200758072746",
+          "name": "question3",
+          "type": 9
+        },
+        {
+          "id": "7:469524216409014771",
+          "name": "question4",
+          "type": 9
+        },
+        {
+          "id": "8:4584894806581111920",
+          "name": "question5",
+          "type": 9
+        },
+        {
+          "id": "9:8098816447051573642",
+          "name": "question6",
+          "type": 9
+        },
+        {
+          "id": "10:7296783495808461851",
+          "name": "question7",
+          "type": 9
+        },
+        {
+          "id": "11:1749659168654567691",
+          "name": "question8",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:8408306338210336858",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

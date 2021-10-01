@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SettingsFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mfroemmi.gluecksradquizapp.model.SettingsViewModel" />
+
+        <variable
+            name="settingsFragment"
+            type="com.mfroemmi.gluecksradquizapp.SettingsFragment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp"
+        android:background="@drawable/repeat_background">
+
+        <FrameLayout
+            android:id="@+id/fl_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:alpha="0.8"
+                    android:background="@drawable/round_background"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Spielmodus"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_background"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="FRAGEN"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_purple_light_background"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="PUNKTE"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="2"
+                    android:alpha="0.8"
+                    android:background="@drawable/round_background"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Optionen"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/round_purple_light_background"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Versuche"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_tries"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/round_purple_light_background"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@{viewModel.tryLeftover.toString()}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_purple_light_background">
+
+                                <RadioGroup
+                                    android:id="@+id/rg_tries"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_tries1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:checked="@{viewModel.tryLeftover.equals(1)}"
+                                        android:onClick="@{() -> viewModel.setTryLeftover(1)}"
+                                        android:clickable="true"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/rb_tries2"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_tries2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="@{viewModel.tryLeftover.equals(2)}"
+                                        android:onClick="@{() -> viewModel.setTryLeftover(2)}"
+                                        android:clickable="false"
+                                        android:visibility="invisible"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/rb_tries3"
+                                        app:layout_constraintStart_toEndOf="@+id/rb_tries1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_tries3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="@{viewModel.tryLeftover.equals(3)}"
+                                        android:onClick="@{() -> viewModel.setTryLeftover(3)}"
+                                        android:clickable="false"
+                                        android:visibility="invisible"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/rb_tries2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </RadioGroup>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/round_purple_light_background"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Intensität"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_intensity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/round_purple_light_background"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@{viewModel.intensity.toString()}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/round_purple_light_background">
+
+                                <RadioGroup
+                                    android:id="@+id/rg_intens"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_intens1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:checked="@{viewModel.intensity.equals(1)}"
+                                        android:onClick="@{() -> viewModel.setIntensity(1)}"
+                                        android:clickable="true"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/rb_intens2"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_intens2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="@{viewModel.intensity.equals(2)}"
+                                        android:onClick="@{() -> viewModel.setIntensity(2)}"
+                                        android:clickable="true"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/rb_intens3"
+                                        app:layout_constraintStart_toEndOf="@+id/rb_intens1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_intens3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="@{viewModel.intensity.equals(3)}"
+                                        android:onClick="@{() -> viewModel.setIntensity(3)}"
+                                        android:clickable="true"
+                                        android:buttonTint="@color/primary_red"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/rb_intens2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </RadioGroup>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:onClick="@{() -> settingsFragment.goToStartFragment()}"
+                android:text="Zurück"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="24dp"
+                android:onClick="@{() -> settingsFragment.goToQuestionListFragment()}"
+                android:text="Fragen bearbeiten"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</layout>
