@@ -12,6 +12,8 @@ import com.mfroemmi.gluecksradquizapp.adapter.QuestionSetAdapter
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentLoadQuestionSetBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
+import io.objectbox.Box
+import org.koin.android.ext.android.inject
 
 class LoadQuestionSetFragment : Fragment() {
 
@@ -21,8 +23,8 @@ class LoadQuestionSetFragment : Fragment() {
 
     private var binding: FragmentLoadQuestionSetBinding? = null
 
-    private val questionBox = ObjectBox.boxStore.boxFor(QuestionsModel::class.java)
-    private val questionSetBox = ObjectBox.boxStore.boxFor(QuestionSetModel::class.java)
+    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
+    private val questionSetBox: Box<QuestionSetModel> by inject("questionSetModel")
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(

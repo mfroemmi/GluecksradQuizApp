@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
-import android.util.DisplayMetrics
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -17,8 +16,10 @@ import androidx.navigation.fragment.findNavController
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentSpinBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
+import io.objectbox.Box
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
+import org.koin.android.ext.android.inject
 import kotlin.math.exp
 import kotlin.math.pow
 
@@ -27,7 +28,7 @@ class SpinFragment : Fragment() {
     private var binding: FragmentSpinBinding? = null
     private val sharedViewModel: SettingsViewModel by activityViewModels()
 
-    private val questionBox = ObjectBox.boxStore.boxFor(QuestionsModel::class.java)
+    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
 
     private var spinTimer: CountDownTimer? = null
 

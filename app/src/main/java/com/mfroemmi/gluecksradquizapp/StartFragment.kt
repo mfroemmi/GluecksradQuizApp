@@ -10,9 +10,7 @@ import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
 import io.objectbox.Box
-import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
-import org.koin.core.parameter.parametersOf
 import org.koin.standalone.KoinComponent
 import java.text.SimpleDateFormat
 import java.util.*
