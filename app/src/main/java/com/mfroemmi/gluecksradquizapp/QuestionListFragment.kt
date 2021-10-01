@@ -15,16 +15,21 @@ import com.mfroemmi.gluecksradquizapp.databinding.FragmentQuestionListBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
+import io.objectbox.Box
+import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
+import org.koin.standalone.KoinComponent
 import java.text.SimpleDateFormat
 import java.util.*
 
-class QuestionListFragment : Fragment() {
+class QuestionListFragment : Fragment(), KoinComponent {
 
     private var binding: FragmentQuestionListBinding? = null
     private val sharedViewModel: SettingsViewModel by activityViewModels()
 
-    private val questionBox = ObjectBox.boxStore.boxFor(QuestionsModel::class.java)
-    private val questionSetBox = ObjectBox.boxStore.boxFor(QuestionSetModel::class.java)
+    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
+    private val questionSetBox: Box<QuestionSetModel> by inject("questionSetModel")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

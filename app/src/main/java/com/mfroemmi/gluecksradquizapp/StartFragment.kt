@@ -9,21 +9,26 @@ import com.mfroemmi.gluecksradquizapp.databinding.FragmentStartBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
+import io.objectbox.Box
+import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
+import org.koin.standalone.KoinComponent
 import java.text.SimpleDateFormat
 import java.util.*
 
-class StartFragment : Fragment() {
+class StartFragment : Fragment(), KoinComponent {
 
     private var binding: FragmentStartBinding? = null
     private val sharedViewModel: SettingsViewModel by activityViewModels()
 
-    private val questionBox = ObjectBox.boxStore.boxFor(QuestionsModel::class.java)
-    private val questionSetBox = ObjectBox.boxStore.boxFor(QuestionSetModel::class.java)
+    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
+    private val questionSetBox: Box<QuestionSetModel> by inject("questionSetModel")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentStartBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
