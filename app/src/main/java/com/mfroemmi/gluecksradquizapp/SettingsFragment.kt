@@ -5,15 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentSettingsBinding
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
 
-class SettingsFragment : Fragment() {
+@KoinApiExtension
+class SettingsFragment : Fragment(), KoinComponent {
 
     private var binding: FragmentSettingsBinding? = null
-    private val sharedViewModel: SettingsViewModel by activityViewModels()
+    private val sharedViewModel: SettingsViewModel by viewModel()
 
     private var mTryLeftover: Int? = null
     private var mIntensity: Int? = null

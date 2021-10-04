@@ -11,7 +11,6 @@ import android.os.Handler
 import android.os.Looper
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentSpinBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
@@ -20,15 +19,20 @@ import io.objectbox.Box
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
 import org.koin.android.ext.android.inject
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
+import org.koin.core.qualifier.named
 import kotlin.math.exp
 import kotlin.math.pow
 
-class SpinFragment : Fragment() {
+@KoinApiExtension
+class SpinFragment : Fragment(), KoinComponent {
 
     private var binding: FragmentSpinBinding? = null
-    private val sharedViewModel: SettingsViewModel by activityViewModels()
+    private val sharedViewModel: SettingsViewModel by viewModel()
 
-    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
+    private val questionBox: Box<QuestionsModel> by inject(named("questionsModel"))
 
     private var spinTimer: CountDownTimer? = null
 
@@ -72,7 +76,7 @@ class SpinFragment : Fragment() {
 
         mTryLeftover = sharedViewModel.tryLeftover.value
         mIntensity = sharedViewModel.intensity.value
-        mMode = sharedViewModel.mode.value
+        mMode = sharedViewModel.getMode()
 
         questionListNormal = ArrayList()
         for (i in 0..questionBox.all.size-1) {

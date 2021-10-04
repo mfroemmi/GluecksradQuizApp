@@ -3,7 +3,6 @@ package com.mfroemmi.gluecksradquizapp
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentStartBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
@@ -11,17 +10,21 @@ import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
 import io.objectbox.Box
 import org.koin.android.ext.android.inject
-import org.koin.standalone.KoinComponent
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
+import org.koin.core.qualifier.named
 import java.text.SimpleDateFormat
 import java.util.*
 
+@KoinApiExtension
 class StartFragment : Fragment(), KoinComponent {
 
     private var binding: FragmentStartBinding? = null
-    private val sharedViewModel: SettingsViewModel by activityViewModels()
+    private val sharedViewModel: SettingsViewModel by viewModel()
 
-    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
-    private val questionSetBox: Box<QuestionSetModel> by inject("questionSetModel")
+    private val questionBox: Box<QuestionsModel> by inject(named("questionsModel"))
+    private val questionSetBox: Box<QuestionSetModel> by inject(named("questionSetModel"))
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

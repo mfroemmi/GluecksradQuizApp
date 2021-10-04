@@ -26,6 +26,10 @@ class SettingsViewModel : ViewModel() {
         _mode.value = mode
     }
 
+    fun getMode(): String? {
+        return _mode.value
+    }
+
     fun setTryLeftover(tryLeftover: Int) {
         _tryLeftover.value = tryLeftover
     }

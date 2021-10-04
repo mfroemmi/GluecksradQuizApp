@@ -14,8 +14,12 @@ import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import io.objectbox.Box
 import org.koin.android.ext.android.inject
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
+import org.koin.core.qualifier.named
 
-class LoadQuestionSetFragment : Fragment() {
+@KoinApiExtension
+class LoadQuestionSetFragment : Fragment(), KoinComponent {
 
     // questionSetLiveData und loadOrDeleteLiveData wird im Recyclerview auf Änderungen überwacht
     private var questionSetLiveData = MutableLiveData<QuestionSetModel>()
@@ -23,8 +27,8 @@ class LoadQuestionSetFragment : Fragment() {
 
     private var binding: FragmentLoadQuestionSetBinding? = null
 
-    private val questionBox: Box<QuestionsModel> by inject("questionsModel")
-    private val questionSetBox: Box<QuestionSetModel> by inject("questionSetModel")
+    private val questionBox: Box<QuestionsModel> by inject(named("questionsModel"))
+    private val questionSetBox: Box<QuestionSetModel> by inject(named("questionSetModel"))
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(
@@ -43,7 +47,6 @@ class LoadQuestionSetFragment : Fragment() {
 
         // questionSet wird im Recyclerview auf Änderungen überwacht
         questionSetLiveData.observe(viewLifecycleOwner, {
-            println(questionSetLiveData.value)
             if (loadOrDeleteLiveData.value == "load") {
                 questionSetLiveData.value?.let { it -> loadSelectedQuestionSet(it) }
                 goToQuestionListFragment()

@@ -7,19 +7,17 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
-import androidx.activity.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.recyclerview.widget.RecyclerView
-import com.mfroemmi.gluecksradquizapp.adapter.QuestionSetAdapter
-import com.mfroemmi.gluecksradquizapp.databinding.FragmentQuestionListBinding
-import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
-import io.objectbox.query.Query
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
 
-class MainActivity : AppCompatActivity() {
+@KoinApiExtension
+class MainActivity : AppCompatActivity(), KoinComponent {
 
-    private val sharedViewModel: SettingsViewModel by viewModels()
+    val sharedViewModel: SettingsViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
