@@ -21,14 +21,12 @@ class QuestionSetAdapter(
     class QuestionSetViewHolder(
         val context: Context,
         view: View,
-        questionSetLiveData: MutableLiveData<QuestionSetModel>,
-        loadOrDeleteLiveData: MutableLiveData<String>
+        var questionSetLiveData: MutableLiveData<QuestionSetModel>,
+        var loadOrDeleteLiveData: MutableLiveData<String>
     ) : RecyclerView.ViewHolder(view) {
 
         val nameTextView: TextView = view.findViewById(R.id.question_set_name)
         val dateTextView: TextView = view.findViewById(R.id.question_set_date)
-        var questionSetLiveData: MutableLiveData<QuestionSetModel> = questionSetLiveData
-        var loadOrDeleteLiveData: MutableLiveData<String> = loadOrDeleteLiveData
 
         // ViewPager2
         var viewPager: ViewPager2 = view.findViewById(R.id.vp_load_delete)

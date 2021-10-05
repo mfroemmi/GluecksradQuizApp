@@ -5,6 +5,7 @@
     tools:context=".QuestionListFragment">
 
     <data>
+
         <variable
             name="questionListFragment"
             type="com.mfroemmi.gluecksradquizapp.QuestionListFragment" />
@@ -13,12 +14,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/repeat_background"
         android:orientation="vertical"
-        android:paddingTop="24dp"
         android:paddingStart="24dp"
+        android:paddingTop="24dp"
         android:paddingEnd="24dp"
-        android:paddingBottom="24dp"
-        android:background="@drawable/repeat_background">
+        android:paddingBottom="24dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -29,151 +30,571 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question1"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tf_question5"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginEnd="15dp"
-                    android:hint="Frage 1">
-
-                    <EditText
-                        android:id="@+id/et_question1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
-                    android:hint="Frage 2"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_question5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tf_question6"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question1">
-
-                    <EditText
-                        android:id="@+id/et_question2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
-                    android:hint="Frage 3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tf_question7"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question2">
-
-                    <EditText
-                        android:id="@+id/et_question3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
-                    android:hint="Frage 4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tf_question8"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question3">
-
-                    <EditText
-                        android:id="@+id/et_question4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Frage 5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tf_question1"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <EditText
-                        android:id="@+id/et_question5"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question6"
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 1"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question1_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question1_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="Frage 6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tf_question2"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question1">
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_question6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question1">
 
-                    <EditText
-                        android:id="@+id/et_question6"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question7"
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 2"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question2_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question2_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="Frage 7"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tf_question3"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question2">
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_question7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question2">
 
-                    <EditText
-                        android:id="@+id/et_question7"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_question8"
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 3"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question3_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question3_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="Frage 8"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tf_question4"
-                    app:layout_constraintTop_toBottomOf="@+id/tf_question3">
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_question8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question3">
 
-                    <EditText
-                        android:id="@+id/et_question8"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 4"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question4_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question4_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cv_question1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 5"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question5_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question5_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cv_question2"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 6"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question6_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question6_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cv_question3"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 7"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question7_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question7_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_question8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cv_question4"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_question3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Frage 8"
+                                android:gravity="bottom"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question8_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Frage"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
+                                android:text="Antwort 1"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tv_question8_secondary_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:hint="Antwort"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

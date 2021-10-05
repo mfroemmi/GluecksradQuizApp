@@ -79,9 +79,8 @@ class SpinFragment : Fragment(), KoinComponent {
         mMode = sharedViewModel.getMode()
 
         questionListNormal = ArrayList()
-        for (i in 0..questionBox.all.size-1) {
+        for (i in 0 until questionBox.all.size) {
             questionListNormal.add(questionBox.all[i].question)
-            println(questionBox.all[i].question)
         }
         questionList = questionListNormal
         scoreList = sharedViewModel.getScore()
@@ -231,7 +230,9 @@ class SpinFragment : Fragment(), KoinComponent {
 
                 // Verhindert das der Zeiger in der Mitte zwischen zwei Feldern stehen bleibt
                 if (valueGauss < 0.1 && valueRotation > 0.5 && valueRotation < 0.55) {
+                    i += 0
                 } else if (isLeft && valueGauss < 0.1 && valueRotation > -0.50 && valueRotation < -0.40) {
+                    i += 0
                 } else {
                     i += spinValues[1].toString().toFloat()
                 }
@@ -537,13 +538,6 @@ class SpinFragment : Fragment(), KoinComponent {
         }
         if (losePlayer != null) {
             losePlayer!!.stop()
-        }
-    }
-
-    private fun stopSpinSound() {
-        if (soundPool != null) {
-            soundPool?.release()
-            soundPool = null
         }
     }
 

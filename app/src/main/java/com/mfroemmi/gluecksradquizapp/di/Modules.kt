@@ -5,7 +5,6 @@ import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
 import io.objectbox.kotlin.boxFor
-import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 

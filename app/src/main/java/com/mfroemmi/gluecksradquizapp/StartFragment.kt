@@ -40,7 +40,9 @@ class StartFragment : Fragment(), KoinComponent {
         // Wird die App zum ersten mal gestartet, werden die "standard"-Fragen in die Datenbank geschrieben
         if (questionBox.isEmpty) {
             for (i in 0..7) {
-                val question = QuestionsModel(question = sharedViewModel.getQuestions()[i])
+                val question = QuestionsModel(
+                    question = sharedViewModel.getQuestions()[i],
+                    answer = sharedViewModel.getAnswers()[i])
                 questionBox.put(question)
             }
         }
@@ -62,7 +64,7 @@ class StartFragment : Fragment(), KoinComponent {
     }
 
     // TODO: Wird der Fragensatz-Platzhalter nicht mehr benötigt, kann die Funktion gelöscht werden
-    fun loadQuestionSet() {
+    private fun loadQuestionSet() {
         var element: QuestionSetModel
         val date = getDate()
         for (i in 0..50) {
@@ -76,7 +78,15 @@ class StartFragment : Fragment(), KoinComponent {
                 question5 = "question5: $i",
                 question6 = "question6: $i",
                 question7 = "question7: $i",
-                question8 = "question8: $i")
+                question8 = "question8: $i",
+                answer1 = "answer1: $i",
+                answer2 = "answer2: $i",
+                answer3 = "answer3: $i",
+                answer4 = "answer4: $i",
+                answer5 = "answer5: $i",
+                answer6 = "answer6: $i",
+                answer7 = "answer7: $i",
+                answer8 = "answer8: $i")
             questionSetBox.put(element)
         }
     }

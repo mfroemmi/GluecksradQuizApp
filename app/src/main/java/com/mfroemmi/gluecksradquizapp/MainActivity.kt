@@ -17,7 +17,7 @@ import org.koin.core.component.KoinComponent
 @KoinApiExtension
 class MainActivity : AppCompatActivity(), KoinComponent {
 
-    val sharedViewModel: SettingsViewModel by viewModel()
+    private val sharedViewModel: SettingsViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), KoinComponent {
         }
     }
 
-    fun getDisplaySize(): Int {
+    private fun getDisplaySize(): Int {
         val display =
             windowManager.defaultDisplay
         // TODO: Die Methode .defaultDisplay wird in der aktuellen API nicht mehr unterstützt.

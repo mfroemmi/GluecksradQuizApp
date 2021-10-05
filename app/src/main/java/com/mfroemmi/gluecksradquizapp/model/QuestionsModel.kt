@@ -8,7 +8,8 @@ data class QuestionsModel(
 
     @Id
     var id: Long = 0,
-    val question: String
+    val question: String,
+    val answer: String
 
 )
 

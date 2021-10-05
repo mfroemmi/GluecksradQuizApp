@@ -34,7 +34,7 @@ class LoadQuestionSetFragment : Fragment(), KoinComponent {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentLoadQuestionSetBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
@@ -82,14 +82,14 @@ class LoadQuestionSetFragment : Fragment(), KoinComponent {
     // Wird ein neuer Fragensatz geladen wird dieser in der ObjectBox gespeichert
     private fun loadSelectedQuestionSet(questionSet: QuestionSetModel) {
         questionBox.removeAll()
-        questionBox.put(QuestionsModel(question = questionSet.question1))
-        questionBox.put(QuestionsModel(question = questionSet.question2))
-        questionBox.put(QuestionsModel(question = questionSet.question3))
-        questionBox.put(QuestionsModel(question = questionSet.question4))
-        questionBox.put(QuestionsModel(question = questionSet.question5))
-        questionBox.put(QuestionsModel(question = questionSet.question6))
-        questionBox.put(QuestionsModel(question = questionSet.question7))
-        questionBox.put(QuestionsModel(question = questionSet.question8))
+        questionBox.put(QuestionsModel(question = questionSet.question1, answer = questionSet.answer1))
+        questionBox.put(QuestionsModel(question = questionSet.question2, answer = questionSet.answer2))
+        questionBox.put(QuestionsModel(question = questionSet.question3, answer = questionSet.answer3))
+        questionBox.put(QuestionsModel(question = questionSet.question4, answer = questionSet.answer4))
+        questionBox.put(QuestionsModel(question = questionSet.question5, answer = questionSet.answer5))
+        questionBox.put(QuestionsModel(question = questionSet.question6, answer = questionSet.answer6))
+        questionBox.put(QuestionsModel(question = questionSet.question7, answer = questionSet.answer7))
+        questionBox.put(QuestionsModel(question = questionSet.question8, answer = questionSet.answer8))
     }
 
     // Wird ein Fragensatz im ViewPager gelöscht, wird dieser in der ObjectBox entfernt

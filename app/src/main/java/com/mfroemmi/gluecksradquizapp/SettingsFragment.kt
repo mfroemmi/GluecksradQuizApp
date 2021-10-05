@@ -25,7 +25,7 @@ class SettingsFragment : Fragment(), KoinComponent {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentSettingsBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 

@@ -9,13 +9,13 @@ class SettingsViewModel : ViewModel() {
     private val _screenHeight = MutableLiveData<Int>()
     val screenHeight: LiveData<Int> = _screenHeight
 
-    private val _mode = MutableLiveData<String>("question")
+    private val _mode = MutableLiveData("question")
     val mode: LiveData<String> = _mode
 
-    private val _tryLeftover = MutableLiveData<Int>(0)
+    private val _tryLeftover = MutableLiveData(0)
     val tryLeftover: LiveData<Int> = _tryLeftover
 
-    private val _intensity = MutableLiveData<Int>(1)
+    private val _intensity = MutableLiveData(1)
     val intensity: LiveData<Int> = _intensity
 
     fun setScreenHeight(screenHeight: Int) {
@@ -51,6 +51,21 @@ class SettingsViewModel : ViewModel() {
         questionList.add("So viele Hobbits sind ein Hobbyte")
 
         return questionList
+    }
+
+    fun getAnswers(): ArrayList<String> {
+        val answerList = ArrayList<String>()
+
+        answerList.add("13")
+        answerList.add("7")
+        answerList.add("4")
+        answerList.add("23")
+        answerList.add("53")
+        answerList.add("13")
+        answerList.add("1")
+        answerList.add("8")
+
+        return answerList
     }
 
     fun getScore(): ArrayList<String> {

@@ -1,21 +1,16 @@
 package com.mfroemmi.gluecksradquizapp.adapter
 
-import android.app.ActionBar
 import android.app.Dialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.compose.ui.graphics.Color
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.mfroemmi.gluecksradquizapp.R
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 

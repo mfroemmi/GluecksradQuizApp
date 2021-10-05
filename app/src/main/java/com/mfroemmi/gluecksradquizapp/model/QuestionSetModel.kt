@@ -17,6 +17,14 @@ data class QuestionSetModel (
     val question5: String,
     val question6: String,
     val question7: String,
-    val question8: String
+    val question8: String,
+    val answer1: String,
+    val answer2: String,
+    val answer3: String,
+    val answer4: String,
+    val answer5: String,
+    val answer6: String,
+    val answer7: String,
+    val answer8: String
 
         )

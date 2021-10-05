@@ -33,7 +33,7 @@ class QuestionListFragment : Fragment(), KoinComponent {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentQuestionListBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
@@ -52,14 +52,14 @@ class QuestionListFragment : Fragment(), KoinComponent {
 
     fun goToSettingsFragment() {
 
-        if (binding!!.etQuestion1.text.isEmpty() ||
-            binding!!.etQuestion2.text.isEmpty() ||
-            binding!!.etQuestion3.text.isEmpty() ||
-            binding!!.etQuestion4.text.isEmpty() ||
-            binding!!.etQuestion5.text.isEmpty() ||
-            binding!!.etQuestion6.text.isEmpty() ||
-            binding!!.etQuestion7.text.isEmpty() ||
-            binding!!.etQuestion8.text.isEmpty()
+        if (binding!!.tvQuestion1Text.text!!.isEmpty() ||
+            binding!!.tvQuestion2Text.text!!.isEmpty() ||
+            binding!!.tvQuestion3Text.text!!.isEmpty() ||
+            binding!!.tvQuestion4Text.text!!.isEmpty() ||
+            binding!!.tvQuestion5Text.text!!.isEmpty() ||
+            binding!!.tvQuestion6Text.text!!.isEmpty() ||
+            binding!!.tvQuestion7Text.text!!.isEmpty() ||
+            binding!!.tvQuestion8Text.text!!.isEmpty()
         ) {
             Toast.makeText(
                 context,
@@ -68,14 +68,14 @@ class QuestionListFragment : Fragment(), KoinComponent {
             ).show()
         } else {
             questionBox.removeAll()
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion1.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion2.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion3.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion4.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion5.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion6.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion7.text.toString()))
-            questionBox.put(QuestionsModel(question = binding!!.etQuestion8.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion1Text.text.toString(), answer = binding!!.tvQuestion1SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion2Text.text.toString(), answer = binding!!.tvQuestion2SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion3Text.text.toString(), answer = binding!!.tvQuestion3SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion4Text.text.toString(), answer = binding!!.tvQuestion4SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion5Text.text.toString(), answer = binding!!.tvQuestion5SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion6Text.text.toString(), answer = binding!!.tvQuestion6SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion7Text.text.toString(), answer = binding!!.tvQuestion7SecondaryText.text.toString()))
+            questionBox.put(QuestionsModel(question = binding!!.tvQuestion8Text.text.toString(), answer = binding!!.tvQuestion8SecondaryText.text.toString()))
 
             findNavController().navigate(R.id.action_questionListFragment_to_settingsFragment)
         }
@@ -87,14 +87,14 @@ class QuestionListFragment : Fragment(), KoinComponent {
     }
 
     fun goToSaveQuestionSetDialog() {
-        if (binding!!.etQuestion1.text.isEmpty() ||
-            binding!!.etQuestion2.text.isEmpty() ||
-            binding!!.etQuestion3.text.isEmpty() ||
-            binding!!.etQuestion4.text.isEmpty() ||
-            binding!!.etQuestion5.text.isEmpty() ||
-            binding!!.etQuestion6.text.isEmpty() ||
-            binding!!.etQuestion7.text.isEmpty() ||
-            binding!!.etQuestion8.text.isEmpty()
+        if (binding!!.tvQuestion1Text.text!!.isEmpty() ||
+            binding!!.tvQuestion2Text.text!!.isEmpty() ||
+            binding!!.tvQuestion3Text.text!!.isEmpty() ||
+            binding!!.tvQuestion4Text.text!!.isEmpty() ||
+            binding!!.tvQuestion5Text.text!!.isEmpty() ||
+            binding!!.tvQuestion6Text.text!!.isEmpty() ||
+            binding!!.tvQuestion7Text.text!!.isEmpty() ||
+            binding!!.tvQuestion8Text.text!!.isEmpty()
         ) {
             Toast.makeText(
                 context,
@@ -122,21 +122,28 @@ class QuestionListFragment : Fragment(), KoinComponent {
         }
     }
 
-    fun saveQuestionSet(name: String) {
-        var element: QuestionSetModel
+    private fun saveQuestionSet(name: String) {
+        val element: QuestionSetModel
         val date = getDate()
         element = QuestionSetModel(
             name = name,
             date = date,
-            question1 = binding!!.etQuestion1.text.toString(),
-            question2 = binding!!.etQuestion2.text.toString(),
-            question3 = binding!!.etQuestion3.text.toString(),
-            question4 = binding!!.etQuestion4.text.toString(),
-            question5 = binding!!.etQuestion5.text.toString(),
-            question6 = binding!!.etQuestion6.text.toString(),
-            question7 = binding!!.etQuestion7.text.toString(),
-            question8 = binding!!.etQuestion8.text.toString()
-        )
+            question1 = binding!!.tvQuestion1Text.text.toString(),
+            question2 = binding!!.tvQuestion2Text.text.toString(),
+            question3 = binding!!.tvQuestion3Text.text.toString(),
+            question4 = binding!!.tvQuestion4Text.text.toString(),
+            question5 = binding!!.tvQuestion5Text.text.toString(),
+            question6 = binding!!.tvQuestion6Text.text.toString(),
+            question7 = binding!!.tvQuestion7Text.text.toString(),
+            question8 = binding!!.tvQuestion8Text.text.toString(),
+            answer1 = binding!!.tvQuestion1SecondaryText.text.toString(),
+            answer2 = binding!!.tvQuestion2SecondaryText.text.toString(),
+            answer3 = binding!!.tvQuestion3SecondaryText.text.toString(),
+            answer4 = binding!!.tvQuestion4SecondaryText.text.toString(),
+            answer5 = binding!!.tvQuestion5SecondaryText.text.toString(),
+            answer6 = binding!!.tvQuestion6SecondaryText.text.toString(),
+            answer7 = binding!!.tvQuestion7SecondaryText.text.toString(),
+            answer8 = binding!!.tvQuestion8SecondaryText.text.toString())
         questionSetBox.put(element)
     }
 
@@ -150,7 +157,9 @@ class QuestionListFragment : Fragment(), KoinComponent {
     fun resetToDefault() {
         questionBox.removeAll()
         for (i in 0..7) {
-            val question = QuestionsModel(question = sharedViewModel.getQuestions()[i])
+            val question = QuestionsModel(
+                question = sharedViewModel.getQuestions()[i],
+                answer = sharedViewModel.getAnswers()[i])
             questionBox.put(question)
         }
         setQuestionListFromObjectBox()
@@ -158,14 +167,29 @@ class QuestionListFragment : Fragment(), KoinComponent {
 
     private fun setQuestionListFromObjectBox() {
         val questions = questionBox.all
-        binding!!.etQuestion1.setText(questions[0].question)
-        binding!!.etQuestion2.setText(questions[1].question)
-        binding!!.etQuestion3.setText(questions[2].question)
-        binding!!.etQuestion4.setText(questions[3].question)
-        binding!!.etQuestion5.setText(questions[4].question)
-        binding!!.etQuestion6.setText(questions[5].question)
-        binding!!.etQuestion7.setText(questions[6].question)
-        binding!!.etQuestion8.setText(questions[7].question)
+        binding!!.tvQuestion1Text.setText(questions[0].question)
+        binding!!.tvQuestion1SecondaryText.setText(questions[0].answer)
+
+        binding!!.tvQuestion2Text.setText(questions[1].question)
+        binding!!.tvQuestion2SecondaryText.setText(questions[1].answer)
+
+        binding!!.tvQuestion3Text.setText(questions[2].question)
+        binding!!.tvQuestion3SecondaryText.setText(questions[2].answer)
+
+        binding!!.tvQuestion4Text.setText(questions[3].question)
+        binding!!.tvQuestion4SecondaryText.setText(questions[3].answer)
+
+        binding!!.tvQuestion5Text.setText(questions[4].question)
+        binding!!.tvQuestion5SecondaryText.setText(questions[4].answer)
+
+        binding!!.tvQuestion6Text.setText(questions[5].question)
+        binding!!.tvQuestion6SecondaryText.setText(questions[5].answer)
+
+        binding!!.tvQuestion7Text.setText(questions[6].question)
+        binding!!.tvQuestion7SecondaryText.setText(questions[6].answer)
+
+        binding!!.tvQuestion8Text.setText(questions[7].question)
+        binding!!.tvQuestion8SecondaryText.setText(questions[7].answer)
     }
 
     override fun onDestroyView() {
