@@ -12,6 +12,8 @@ import android.os.Looper
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
+import com.mfroemmi.gluecksradquizapp.adapter.ViewPager2PopupAdapter
 import com.mfroemmi.gluecksradquizapp.databinding.FragmentSpinBinding
 import com.mfroemmi.gluecksradquizapp.model.QuestionsModel
 import com.mfroemmi.gluecksradquizapp.model.SettingsViewModel
@@ -54,6 +56,7 @@ class SpinFragment : Fragment(), KoinComponent {
     private lateinit var questionListNormal: ArrayList<String>
     private lateinit var scoreList: ArrayList<String>
     private var rotationList: MutableList<Float> = ArrayList()
+    private lateinit var currentQuestion: ArrayList<String>
 
     private var soundPool: SoundPool? = null
     private val soundId = 1
@@ -61,6 +64,8 @@ class SpinFragment : Fragment(), KoinComponent {
     private var winPlayer: MediaPlayer? = null
     private var questionPlayer: MediaPlayer? = null
     private var losePlayer: MediaPlayer? = null
+
+    private lateinit var adapter: ViewPager2PopupAdapter
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
@@ -73,6 +78,15 @@ class SpinFragment : Fragment(), KoinComponent {
         // Initialisierung des -soundPool- Players zum abspielen des Spinsounds
         soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
         soundPool!!.load(context, R.raw.spinsound, 1)
+
+        currentQuestion = ArrayList()
+        currentQuestion.add("Antwort")
+        currentQuestion.add("Frage")
+
+        // Initialisierung des ViewPagers und des Adapters
+        val viewPager: ViewPager2 = binding!!.vpPopupQuestion
+        adapter = ViewPager2PopupAdapter(currentQuestion)
+        viewPager.adapter = adapter
 
         mTryLeftover = sharedViewModel.tryLeftover.value
         mIntensity = sharedViewModel.intensity.value
@@ -333,14 +347,16 @@ class SpinFragment : Fragment(), KoinComponent {
          */
         if (isQuestion) {
             binding!!.vPopupScreen.visibility = View.GONE
-            binding!!.llPopupQuestion.visibility = View.GONE
+            binding!!.vpPopupQuestion.visibility = View.GONE
             binding!!.ivPopupCancel.visibility = View.GONE
             binding!!.ivHighlight.visibility = View.INVISIBLE
         } else {
-            binding!!.tvPopupQuestion.text = questionList[question]
             binding!!.vPopupScreen.visibility = View.VISIBLE
-            binding!!.llPopupQuestion.visibility = View.VISIBLE
+            binding!!.vpPopupQuestion.visibility = View.VISIBLE
             binding!!.ivPopupCancel.visibility = View.VISIBLE
+            currentQuestion[0] = questionBox.all[question].question
+            currentQuestion[1] = questionBox.all[question].answer
+            adapter.notifyDataSetChanged()
         }
     }
 

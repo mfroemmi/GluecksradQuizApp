@@ -202,32 +202,20 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_popup_question"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_popup_question"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_margin="24dp"
             android:alpha="0.8"
             android:background="@drawable/round_background"
-            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tv_popup_question"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="30dp"
-                android:text="Frage"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
+        </androidx.viewpager2.widget.ViewPager2>
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/konfettiView"

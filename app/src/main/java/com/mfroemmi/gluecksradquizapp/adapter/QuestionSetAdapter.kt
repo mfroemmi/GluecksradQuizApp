@@ -56,7 +56,7 @@ class QuestionSetAdapter(
 
     private fun initViewPager2(context: Context, adapterLayout: View, name: String, item: QuestionSetModel, questionSetLiveData: MutableLiveData<QuestionSetModel>, loadOrDeleteLiveData: MutableLiveData<String>): ViewPager2 {
         val viewPager: ViewPager2 = adapterLayout.findViewById(R.id.vp_load_delete)
-        val adapter = ViewPager2Adapter(context, name, item, questionSetLiveData, loadOrDeleteLiveData)
+        val adapter = ViewPager2LoadDeleteAdapter(context, name, item, questionSetLiveData, loadOrDeleteLiveData)
         viewPager.adapter = adapter
 
         return viewPager

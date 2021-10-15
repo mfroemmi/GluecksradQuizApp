@@ -14,13 +14,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mfroemmi.gluecksradquizapp.R
 import com.mfroemmi.gluecksradquizapp.model.QuestionSetModel
 
-class ViewPager2Adapter(
+class ViewPager2LoadDeleteAdapter(
     var context: Context,
     var name: String,
     var item: QuestionSetModel,
     var questionSetLiveData: MutableLiveData<QuestionSetModel>,
     var loadOrDeleteLiveData: MutableLiveData<String>
-) : RecyclerView.Adapter<ViewPager2Adapter.ViewHolder>() {
+) : RecyclerView.Adapter<ViewPager2LoadDeleteAdapter.ViewHolder>() {
 
     class ViewHolder(val context: Context, view: View, var name: String, var item: QuestionSetModel, var questionSetLiveData: MutableLiveData<QuestionSetModel>, var loadOrDeleteLiveData: MutableLiveData<String>) :
         RecyclerView.ViewHolder(view), View.OnClickListener {

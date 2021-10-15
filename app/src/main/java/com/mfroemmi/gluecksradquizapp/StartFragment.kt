@@ -33,9 +33,11 @@ class StartFragment : Fragment(), KoinComponent {
         val fragmentBinding = FragmentStartBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
+        /*
         if (questionSetBox.isEmpty) {
             loadQuestionSet()
         }
+         */
 
         // Wird die App zum ersten mal gestartet, werden die "standard"-Fragen in die Datenbank geschrieben
         if (questionBox.isEmpty) {
@@ -64,6 +66,7 @@ class StartFragment : Fragment(), KoinComponent {
     }
 
     // TODO: Wird der Fragensatz-Platzhalter nicht mehr benötigt, kann die Funktion gelöscht werden
+    /*
     private fun loadQuestionSet() {
         var element: QuestionSetModel
         val date = getDate()
@@ -90,6 +93,7 @@ class StartFragment : Fragment(), KoinComponent {
             questionSetBox.put(element)
         }
     }
+     */
 
     private fun getDate(): String {
         val c = Calendar.getInstance()

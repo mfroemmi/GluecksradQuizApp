@@ -10,6 +10,7 @@
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable-v24/round_white_background.xml" value="0.38166666666666665" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/dialog_load_question_set.xml" value="0.3402777777777778" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_arrow_left.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_arrow_right.xml" value="0.3402777777777778" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_check.xml" value="0.3828125" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3402777777777778" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/drawable/ic_settings.xml" value="0.3828125" />
@@ -23,9 +24,10 @@
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_question_list.xml" value="0.264" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_save_question_set.xml" value="0.32592592592592595" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
-        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_spin.xml" value="0.2" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_spin.xml" value="0.25" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/fragment_start.xml" value="0.25" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/load_delete_item.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/question_answer_item.xml" value="0.25" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/question_set_item.xml" value="0.25" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/layout/spin_fragment.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/MarcelFroemberg/AndroidStudioProjects/GluecksradQuizApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19675925925925927" />

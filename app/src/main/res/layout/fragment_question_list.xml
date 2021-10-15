@@ -46,14 +46,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 1"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -65,7 +65,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -89,7 +88,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -104,7 +102,7 @@
                     android:id="@+id/cv_question2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toStartOf="@+id/cv_question6"
                     app:layout_constraintStart_toStartOf="parent"
@@ -117,14 +115,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 2"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -136,7 +134,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -160,7 +157,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -175,7 +171,7 @@
                     android:id="@+id/cv_question3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toStartOf="@+id/cv_question7"
                     app:layout_constraintStart_toStartOf="parent"
@@ -188,14 +184,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 3"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -207,7 +203,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -231,7 +226,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -246,7 +240,7 @@
                     android:id="@+id/cv_question4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toStartOf="@+id/cv_question8"
                     app:layout_constraintStart_toStartOf="parent"
@@ -259,14 +253,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 4"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -278,7 +272,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -302,7 +295,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -329,14 +321,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 5"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -348,7 +340,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -372,7 +363,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -387,7 +377,7 @@
                     android:id="@+id/cv_question6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cv_question2"
@@ -400,14 +390,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 6"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -419,7 +409,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -443,7 +432,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -458,7 +446,7 @@
                     android:id="@+id/cv_question7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cv_question3"
@@ -471,14 +459,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 7"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -490,7 +478,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -514,7 +501,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
@@ -529,7 +515,7 @@
                     android:id="@+id/cv_question8"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cv_question4"
@@ -542,14 +528,14 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:text="Frage 8"
-                                android:gravity="bottom"
+                                android:gravity="top"
                                 android:textSize="12sp" />
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -561,7 +547,6 @@
                                 android:paddingBottom="0dp"
                                 android:hint="Frage"
                                 android:textColor="@color/black"
-                                android:textSize="16sp"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
                         </LinearLayout>
@@ -585,7 +570,6 @@
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
                                 android:hint="Antwort"
-                                android:textSize="14sp"
                                 android:textColor="@color/black"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
