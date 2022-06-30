@@ -3,3 +3,5 @@ Glücksrad Quiz App - Eine App mit einem Quiz- und Punktemodus der viele weitere
 
 <img src="images/gluecksrad_01.png">
 <img src="images/gluecksrad_02.png">
+<img src="images/gluecksrad_03.png">
+<img src="images/gluecksrad_04.png">
